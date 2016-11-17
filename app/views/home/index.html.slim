@@ -1,0 +1,11 @@
+h1
+  | list of posts
+
+section.news
+  - @posts.each do |post|
+    article
+      h1.title
+        a href=(post_url(id: post.id))
+          = post.title
+      p.text
+        = post.text
