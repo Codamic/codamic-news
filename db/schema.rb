@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008105162) do
+ActiveRecord::Schema.define(version: 20161028191047) do
 
   create_table "application_models", force: :cascade do |t|
     t.string   "model"
@@ -85,5 +85,19 @@ ActiveRecord::Schema.define(version: 20161008105162) do
   add_index "faalis_users", ["email"], name: "index_faalis_users_on_email", unique: true
   add_index "faalis_users", ["reset_password_token"], name: "index_faalis_users_on_reset_password_token", unique: true
   add_index "faalis_users", ["unlock_token"], name: "index_faalis_users_on_unlock_token", unique: true
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

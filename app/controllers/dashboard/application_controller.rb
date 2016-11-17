@@ -6,11 +6,11 @@ class Dashboard::ApplicationController < Faalis::Dashboard::ApplicationControlle
 
       # Put your sidebar entries in here like this:
       #
-      # s.menu(title, icon: 'fa fa-book') do
-      #   s.item(title,
-      #          url: main_app.dashboard_books_path,
-      #          model: 'Book')
-      # end
+      s.menu("news", icon: 'fa fa-book') do
+        s.item("posts",
+               url: main_app.dashboard_posts_path,
+               model: 'Post')
+      end
       #
       # For more information take a look at `sidebar` section of Faalis guides.
     end

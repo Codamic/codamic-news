@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
+
   mount Faalis::Engine => '/'
+
+
+  resources :posts, only: [:index, :show]
 
   api_routes do
     # Your API routes goes here.
   end
 
   in_dashboard do
+    resources :posts
     # Your dashboard routes goes here.
   end
 
@@ -13,7 +18,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
