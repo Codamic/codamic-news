@@ -60,3 +60,7 @@ gem "faalis"
 
 
 gem 'jquery-turbolinks'
+group :development, :test do
+  gem 'railroady'
+  gem "rails-erd"
+end
